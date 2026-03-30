@@ -17,3 +17,8 @@ function showPlaylist(mood) {
     </iframe>
   `;
 }
+function showPlaylist(mood) {
+  document.getElementById("player").innerHTML = `
+    <iframe src="${playlists[mood]}" width="300" height="380"></iframe>
+  `;
+}
