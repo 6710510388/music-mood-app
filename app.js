@@ -22,3 +22,14 @@ function showPlaylist(mood) {
     <iframe src="${playlists[mood]}" width="300" height="380"></iframe>
   `;
 }
+function analyzeMood() {
+  const text = document.getElementById("textInput").value;
+
+  if (text.includes("เหนื่อย") || text.includes("เศร้า")) {
+    showPlaylist("sad");
+  } else if (text.includes("ดีใจ") || text.includes("สนุก")) {
+    showPlaylist("happy");
+  } else {
+    showPlaylist("chill");
+  }
+}
